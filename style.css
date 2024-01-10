@@ -5,11 +5,12 @@
 }
 
 body{
-    margin: auto;
-
+    margin: 10px;
     font-family: sans-serif;
     background-color: #af8959;
     font-family: 'Diphylleia', serif;
+    align-items: center;
+    text-align: center;
 }
 
 header{
@@ -31,13 +32,33 @@ header img{
     width: 100%;
     max-width: 1500px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
-    margin: 15px auto;
-    padding: 20px 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .menu .card {
+        width: calc(100% - 20px); /* Largura total para telas menores */
+        flex-direction: column;
+        margin: auto;
+    }
+}
+
+.menu .card{
+    margin: 10px; /* Espaçamento entre os cards */
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card:last-of-type{
+    margin-bottom: 25px;
 }
 
 .menu img{
@@ -56,15 +77,16 @@ header img{
 
 .card{
     width: 100%;
-    display: inline-block;
     max-width: 250px;
+    max-height: 250px;
     height: auto;
+    display: inline-block;
     background: #ffffffcd;
     box-shadow: 0px 4px 8px 0 #00000033 , 0 6px 20px 0 #00000030;
     align-content: center;
     text-align: center;
-    padding: 5px;
-    margin: 10px auto;
+    padding: 0.5%;
+    margin: 1% auto;
     border-radius: 25px;
 }
 
@@ -73,6 +95,10 @@ h2{
 }
 
 section{
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
     margin-bottom: 25px;
     border-bottom: 2px solid #400B0B;
 }
